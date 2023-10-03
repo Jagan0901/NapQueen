@@ -3,6 +3,7 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import { MongoClient } from "mongodb";
 import { postsRouter } from "./routes/postsRouter.js";
+import { latestPostRouter } from "./routes/latestPostRouter.js";
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ async function createConnection() {
 export const client = await createConnection();
 
 app.use("/api/posts", postsRouter);
+app.use("/api/post/latest", latestPostRouter);
 
 app.get("/", (req, res) => {
   res.send(`Hi There !!!`);

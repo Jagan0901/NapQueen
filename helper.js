@@ -35,3 +35,12 @@ export async function deleteBlogById(id) {
     .collection("posts")
     .deleteOne({ id: id });
 }
+
+export async function getLatestPosts() {
+  return await client
+    .db("Nap-Queen")
+    .collection("posts")
+    .find({})
+    .sort({updatedAt:-1})
+    .toArray();
+}
