@@ -1,0 +1,31 @@
+1. Retrieve a list of all blog posts:
+      * API endpoint -  /api/posts
+      * Purpose - It'll retrieve all the posts
+      * Response format - [{id,title,content,category,createdAt,updatedAt}]
+
+2. Retrieve a specific blog post by its ID:
+      * API endpoint -  /api/posts/:id
+      * Parameters - It requires id to get the data
+      * Purpose - It'll retrieve the post by given id
+      * Response format - {id,title,content,category,createdAt,updatedAt}
+
+3. Create a new blog post:
+      * API endpoint -  /api/posts
+      * Body - It requires title, content, and category_id to store data in the database
+      * Purpose - It'll store the post in the database
+
+4. Update an existing blog post by its ID:
+      * API endpoint -  /api/posts/:id
+      * Parameters - It requires id to update the data
+      * Body - It requires title and content to update data in the database
+      * Purpose - It'll update the post in the database by given id
+
+5. Delete a blog post by its ID.
+      * API endpoint -  /api/posts/:id
+      * Parameters - It requires id to delete the data
+      * Purpose - It'll delete the post in the database by given id
+
+6. Retrieve the latest blog post.
+      * API endpoint -  /api/post/latest
+      * Purpose - It'll retrieve latest blog post
+      * Response format - {id,title,content,category,createdAt,updatedAt}                    
